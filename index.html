@@ -1,59 +1,91 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bootstrap Website</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts.js"></script>
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Dynamic Website</title>
-        <link rel="stylesheet" href="styles.css">
-        <!-- jQuery CDN -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <img src="Downloads/Me.jpg" alt="Your Photo" width="200">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#goals">Goals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#future">Future Plans</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Welcome to My Personal Website</h1>
+        <p class="lead">Exploring web design, development, and future ambitions</p>
     </header>
-    <div id="expandable">
-        <h3>Click me to expand</h3>
-        <p class="content" style="display: none;">Here is some extra information that you can now see!</p>
-    </div>
-    
-    <main>
-        <section>
-            <h2>My Experience with Web Design and Development</h2>
-            <p>I have taken a web design and development class before, 
-                and although I didn’t pass, I gained valuable experience in the fundamentals of designing and building websites. During that time, I learned the basics of HTML, CSS, and a bit of JavaScript.
-                 Despite the setback, I realized that I have a knack for coding and design, and I’ve continued to practice and refine my skills independently. I’m confident that this time around, I can apply 
-                 what I’ve learned and finally succeed in the course.</p>
-                 <button id="alertButton">Click Me!</button>
-                 <div class="fade-in">
-                    <h2>Welcome to My Dynamic Website</h2>
-                    <p>This content fades in when the page loads.</p>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row mb-4" id="experience">
+            <div class="col-md-4">
+                <h2 class="text-center">My Experience</h2>
+                <p>I have taken a web design and development class before, and although I didn’t pass, I gained valuable experience in HTML, CSS, and JavaScript fundamentals.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">What I Hope to Learn</h2>
+                <p>In this course, I hope to deepen my knowledge of responsive web design, Bootstrap, and modern web development practices.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">Future Goals</h2>
+                <p>With my web development skills, I aim to build innovative web applications and pursue a career as a software developer.</p>
+            </div>
+        </div>
+
+        <!-- Interactive Section -->
+        <div class="row mb-4">
+            <div class="col text-center">
+                <button id="alertButton" class="btn btn-success mb-3">Click Me!</button>
+                <div id="expandable" class="mt-3">
+                    <h3 class="text-info">Click to Expand</h3>
+                    <p class="content" style="display: none;">This is some additional hidden content. Thanks for expanding me!</p>
                 </div>
-                
-        </section>
-        <section>
-            <h2>What I Hope to Learn from This Course</h2>
-            <p>In this course, I hope to deepen my understanding of web design and development principles. I want to strengthen my skills in HTML, 
-                CSS, and JavaScript, as well as explore modern tools, frameworks, and best practices for 
-                creating responsive and user-friendly websites. Additionally, I am eager to learn about UX/UI design principles and gain experience in deploying websites. 
-                My goal is to become more proficient and confident in building functional and visually appealing web applications.</p>
-        </section>
-        <section>
-            <h2>Future Goals</h2>
-            <p>With the web design and development skills I gain from this course, I hope to pursue my dream of becoming a software developer. 
-                I want to create websites and applications 
-                that not only work efficiently but also offer an excellent user experience. In the future, 
-                I’d love to work on developing innovative software solutions or even build my own web-based projects. 
-                Passing this class will be a critical step in preparing me for a successful career in the tech industry.</p>
-                
+            </div>
+        </div>
+
+        <!-- Hover Section -->
+        <div class="row mb-4">
+            <div class="col text-center">
                 <p class="hover-highlight">Hover over this text to see a cool effect!</p>
+            </div>
+        </div>
+    </div>
 
-        
-            </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 My Personal Website | Designed with Bootstrap</p>
+    </footer>
 
-    </main>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
